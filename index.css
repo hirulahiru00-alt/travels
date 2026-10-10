@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-surface: #0e1514;
+    --surface-dim: #0e1514;
+    --surface-bright: #333b39;
+    --surface-container-lowest: #090f0f;
+    --surface-container-low: #161d1c;
+    --surface-container: #1a2120;
+    --surface-container-high: #242b2a;
+    --surface-container-highest: #2f3635;
+    --surface-variant: #2f3635;
+    
+    --on-surface: #dde4e2;
+    --on-surface-variant: #c1c8c4;
+    --outline: #8b928f;
+    --outline-variant: #414845;
+    
+    --primary: #abcec2;
+    --on-primary: #16362e;
+    --primary-container: #0d2e26;
+    --on-primary-container: #76978c;
+    
+    --secondary: #f9bb60;
+    --on-secondary: #452b00;
+    --secondary-container: #8b5c00;
+    --on-secondary-container: #ffdfb8;
+    
+    --tertiary: #a0d1c1;
+    --on-tertiary: #02382d;
+    --tertiary-container: #002f25;
+    --on-tertiary-container: #6a998a;
+  }
+
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0e1514;
+    color: #dde4e2;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .bottom-safe {
+    bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Typography Utility Classes matching Serendib Atelier */
+.font-headline,
+.font-headline-lg,
+.font-headline-md,
+.font-headline-sm,
+.font-headline-lg-mobile,
+.font-display-xl,
+.font-display-xl-mobile {
+  font-family: 'Noto Serif', Georgia, serif;
+}
+
+.font-label,
+.font-label-lg,
+.font-label-md,
+.font-label-sm {
+  font-family: 'Space Grotesk', monospace, sans-serif;
+}
+
+.font-body,
+.font-body-lg,
+.font-body-md,
+.font-body-sm {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Color alias helper classes */
+.bg-surface { background-color: #0e1514; }
+.bg-surface-dim { background-color: #0e1514; }
+.bg-surface-bright { background-color: #333b39; }
+.bg-surface-container-lowest { background-color: #090f0f; }
+.bg-surface-container-low { background-color: #161d1c; }
+.bg-surface-container { background-color: #1a2120; }
+.bg-surface-container-high { background-color: #242b2a; }
+.bg-surface-container-highest { background-color: #2f3635; }
+.bg-surface-variant { background-color: #2f3635; }
+
+.text-surface { color: #0e1514; }
+.text-on-surface { color: #dde4e2; }
+.text-on-surface-variant { color: #c1c8c4; }
+.text-outline { color: #8b928f; }
+.text-outline-variant { color: #414845; }
+
+.bg-primary { background-color: #abcec2; }
+.text-primary { color: #abcec2; }
+.text-on-primary { color: #16362e; }
+.bg-primary-container { background-color: #0d2e26; }
+.text-primary-container { color: #0d2e26; }
+.text-on-primary-container { color: #76978c; }
+
+.bg-secondary { background-color: #f9bb60; }
+.text-secondary { color: #f9bb60; }
+.text-on-secondary { color: #452b00; }
+.bg-secondary-container { background-color: #8b5c00; }
+.text-on-secondary-container { color: #ffdfb8; }
+
+.bg-tertiary { background-color: #a0d1c1; }
+.text-tertiary { color: #a0d1c1; }
+.text-on-tertiary { color: #02382d; }
+.bg-tertiary-container { background-color: #002f25; }
+.text-on-tertiary-container { color: #6a998a; }
+
+.border-surface-line {
+  border-color: rgba(216, 158, 70, 0.15);
+}
+
+.amber-glow {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(216, 158, 70, 0.2);
+}
+
+.glass-panel {
+  background-color: rgba(22, 29, 28, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(216, 158, 70, 0.12);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090f0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #242b2a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f9bb60;
+}
